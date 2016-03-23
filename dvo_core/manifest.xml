@@ -9,13 +9,12 @@
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/dvo_core</url>
 
-  <depend package="opencv2"/>
-  <depend package="pcl"/>
+  <depend package="cv_bridge"/>
+  <build_depend>libpcl-all-dev</build_depend>
+  <run_depend>libpcl-all</run_depend>
   <depend package="sophus"/>
+  <build_depend>cmake_modules</build_depend>
   
-  <depend package="common_rosdeps" />
-  
-  <rosdep name="eigen" />
   <rosdep name="tbb" />
   
   <export>

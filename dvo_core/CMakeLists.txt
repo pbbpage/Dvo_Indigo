@@ -25,6 +25,7 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 #target_link_libraries(example ${PROJECT_NAME})
 
 # Eigen3 library
+find_package(cmake_modules REQUIRED)
 find_package(Eigen REQUIRED)
 include_directories(${Eigen_INCLUDE_DIRS})
 
@@ -64,4 +65,5 @@ rosbuild_add_library(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME} 
     tbb
     boost_thread
+    ${Eigen_LIBRARIES}
 )
